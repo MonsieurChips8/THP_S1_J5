@@ -1,4 +1,6 @@
 # DEBUT LISTE----------------------------------------------------
+def black_list
+	
 
 a = ["@jcunniet","@PaulLampon","@Aziliz31","@ssoumier",
 	"@marionsouzeau","@gaellombart","@bendarag","@AurelieLebelle",
@@ -94,19 +96,27 @@ a = ["@jcunniet","@PaulLampon","@Aziliz31","@ssoumier",
 	"@Laure__Bourdon","@Xavier75","@maximeverner","@s_jourdain",
 	"@LoriHelloc"]
 
+	return a
+end
+
 # FIN LISTE----------------------------------------------------
 
 # NOMBRE DE JOURNALISTES
 ## -----------------------------------------------------------
+def programme1(a)
+	
+	nbr_j = a.size
 
-nbr_j = a.size
+	puts "
+	
+	********
+	-----
+	Il y a #{nbr_j} journalistes dans la liste
+	-----
 
-puts "
------
-Il y a #{nbr_j} journalistes dans la liste
------
+	********"
 
-********"
+end
 
 ## FIN NOMBRE DE JOURNALISTES --------------------------------
 
@@ -115,6 +125,8 @@ Il y a #{nbr_j} journalistes dans la liste
 ## -----------------------------------------------------------
 
 
+def programme2(a)
+	
 
 nbr_nbr = [] << (a.select {|s| s.include? '1'} + 
 a.select {|s| s.include? '2'} +
@@ -129,108 +141,124 @@ a.select {|s| s.include? '0'})
 
 
 puts "
------
-L'Array contient #{nbr_nbr[0].size} éléments avec des chiffres.
------
+	********
 
-********"
+	-----
+	L'Array contient #{nbr_nbr[0].size} éléments avec des chiffres.
+	-----
+
+	********"
+
+end
 
 ## FIN NOMBRE DANS ARRAY-------------------------------------
 
 # AUDE DANS ARRAY
 ##-----------------------------------------------------------
-nom = []
-nom << a.select {|s| s.include? 'aude'}
-puts "
------
-#{nom[0].size} fichier(s) contient les lettres 'aude'. 
------
+def programme3(a)
+	
+	nom = []
+	nom << a.select {|s| s.include? 'aude'}
+	puts "
+	********
 
-********"
+	-----
+	Il y a #{nom[0].size} fichier(s) contenant(s) les lettres 'aude'. 
+	-----
+
+	********"
+end
 
 ## FIN AUDE DANS ARRAY-----------------------------------------
 
 # DEBUT EN MAJ DANS ARRAY
 ##-----------------------------------------------------------
-maj = []
-maj << (a.select{|x|x[/^@A/]}+
-	a.select{|x|x[/^@B/]}+
-	a.select{|x|x[/^@C/]}+
-	a.select{|x|x[/^@D/]}+
-	a.select{|x|x[/^@E/]}+
-	a.select{|x|x[/^@F/]}+
-	a.select{|x|x[/^@G/]}+
-	a.select{|x|x[/^@H/]}+
-	a.select{|x|x[/^@I/]}+
-	a.select{|x|x[/^@J/]}+
-	a.select{|x|x[/^@K/]}+
-	a.select{|x|x[/^@L/]}+
-	a.select{|x|x[/^@M/]}+
-	a.select{|x|x[/^@N/]}+
-	a.select{|x|x[/^@O/]}+
-	a.select{|x|x[/^@P/]}+
-	a.select{|x|x[/^@Q/]}+
-	a.select{|x|x[/^@R/]}+
-	a.select{|x|x[/^@S/]}+
-	a.select{|x|x[/^@T/]}+
-	a.select{|x|x[/^@U/]}+
-	a.select{|x|x[/^@V/]}+
-	a.select{|x|x[/^@W/]}+
-	a.select{|x|x[/^@X/]}+
-	a.select{|x|x[/^@Y/]}+
-	a.select{|x|x[/^@Z/]})
+def programme4(a)
+	
+	maj = []
+	maj << (a.select{|x|x[/^@A/]}+
+		a.select{|x|x[/^@B/]}+
+		a.select{|x|x[/^@C/]}+
+		a.select{|x|x[/^@D/]}+
+		a.select{|x|x[/^@E/]}+
+		a.select{|x|x[/^@F/]}+
+		a.select{|x|x[/^@G/]}+
+		a.select{|x|x[/^@H/]}+
+		a.select{|x|x[/^@I/]}+
+		a.select{|x|x[/^@J/]}+
+		a.select{|x|x[/^@K/]}+
+		a.select{|x|x[/^@L/]}+
+		a.select{|x|x[/^@M/]}+
+		a.select{|x|x[/^@N/]}+
+		a.select{|x|x[/^@O/]}+
+		a.select{|x|x[/^@P/]}+
+		a.select{|x|x[/^@Q/]}+
+		a.select{|x|x[/^@R/]}+
+		a.select{|x|x[/^@S/]}+
+		a.select{|x|x[/^@T/]}+
+		a.select{|x|x[/^@U/]}+
+		a.select{|x|x[/^@V/]}+
+		a.select{|x|x[/^@W/]}+
+		a.select{|x|x[/^@X/]}+
+		a.select{|x|x[/^@Y/]}+
+		a.select{|x|x[/^@Z/]})
 
+	puts "
+	********
 
+	-----
+	L'Array contient #{maj[0].size} éléments avec des Majuscules au début.
+	-----
 
-puts "
------
-L'Array contient #{maj[0].size} éléments avec des Majuscules au début.
------
+	********"
 
-********"
+end
 ## FIN MAJ DANS ARRAY ------------------------------------------
 
 
 
 # MAJ DANS ARRAY
 ##-----------------------------------------------------------
+def programme5(a)
+	
+	maj1 = []
+	maj1 << (a.select{|s| s.include? 'A'} +
+		a.select{|s| s.include? 'B'}+
+		a.select{|s| s.include? 'C'}+
+		a.select{|s| s.include? 'D'}+
+		a.select{|s| s.include? 'E'}+
+		a.select{|s| s.include? 'F'}+
+		a.select{|s| s.include? 'G'}+
+		a.select{|s| s.include? 'H'}+
+		a.select{|s| s.include? 'I'}+
+		a.select{|s| s.include? 'J'}+
+		a.select{|s| s.include? 'K'}+
+		a.select{|s| s.include? 'L'}+
+		a.select{|s| s.include? 'M'}+
+		a.select{|s| s.include? 'N'}+
+		a.select{|s| s.include? 'O'}+
+		a.select{|s| s.include? 'P'}+
+		a.select{|s| s.include? 'Q'}+
+		a.select{|s| s.include? 'R'}+
+		a.select{|s| s.include? 'S'}+
+		a.select{|s| s.include? 'T'}+
+		a.select{|s| s.include? 'U'}+
+		a.select{|s| s.include? 'V'}+
+		a.select{|s| s.include? 'W'}+
+		a.select{|s| s.include? 'X'}+
+		a.select{|s| s.include? 'Y'}+
+		a.select{|s| s.include? 'Z'})
 
-maj1 = []
-maj1 << (a.select{|s| s.include? 'A'} +
-	a.select{|s| s.include? 'B'}+
-	a.select{|s| s.include? 'C'}+
-	a.select{|s| s.include? 'D'}+
-	a.select{|s| s.include? 'E'}+
-	a.select{|s| s.include? 'F'}+
-	a.select{|s| s.include? 'G'}+
-	a.select{|s| s.include? 'H'}+
-	a.select{|s| s.include? 'I'}+
-	a.select{|s| s.include? 'J'}+
-	a.select{|s| s.include? 'K'}+
-	a.select{|s| s.include? 'L'}+
-	a.select{|s| s.include? 'M'}+
-	a.select{|s| s.include? 'N'}+
-	a.select{|s| s.include? 'O'}+
-	a.select{|s| s.include? 'P'}+
-	a.select{|s| s.include? 'Q'}+
-	a.select{|s| s.include? 'R'}+
-	a.select{|s| s.include? 'S'}+
-	a.select{|s| s.include? 'T'}+
-	a.select{|s| s.include? 'U'}+
-	a.select{|s| s.include? 'V'}+
-	a.select{|s| s.include? 'W'}+
-	a.select{|s| s.include? 'X'}+
-	a.select{|s| s.include? 'Y'}+
-	a.select{|s| s.include? 'Z'})
 
+	puts "
+	********
 
+	-----
+	L'Array contient #{maj1[0].size} éléments avec des Majuscules.
+	-----
 
-puts "
------
-L'Array contient #{maj1[0].size} éléments avec des Majuscules.
------
-
-********"
+	********"
+end
 
 ##-----------------------------------------------------------
 
@@ -239,80 +267,214 @@ L'Array contient #{maj1[0].size} éléments avec des Majuscules.
 
 # "_" DANS ARRAY
 # 
+def programme6(a)
+	
+	maj2 = []
+	maj2 << a.select{|s| s.include? '_'}
 
-maj2 = []
-maj2 << a.select{|s| s.include? '_'}
+	puts "
+	********
 
-puts "
------
-L'Array contient #{maj2[0].size} éléments avec des _
------
+	-----
+	L'Array contient #{maj2[0].size} éléments avec des _
+	-----
 
-********"
+	********"
+end
 
-## DEBUT ORDRE ALPHABETIQUE ----------------------------------
-puts "
------
-Voici une liste alphabétique des journalistes
------
+	## DEBUT ORDRE ALPHABETIQUE ----------------------------------
+def programme7(a)
 
-"
+	puts "
+	********
 
-alpha = []
-alpha << a.sort_by(&:downcase)
+	-----
+	Voici une liste alphabétique des journalistes
+	-----
 
-puts alpha.inspect
+	"
 
-puts "
+	alpha = []
+	alpha << a.sort_by(&:downcase)
 
-********
+	puts alpha[0].inspect
 
-"
+	puts "
+
+	********
+
+	"
+end
 ## FIN ORDRE ALPHABETIQUE ----------------------------------
 
 
 
 ## DEBUT LENGTH  --------------------------------------------
+def programme8(a)
+	
+	taille = []
+	taille << a.sort_by(&:length)
 
+	puts " 
+	********
 
-taille = []
-taille << a.sort_by(&:length)
+	-----
+	Voici les 50 éléments les plus courts :
+	-----
+	"
 
+	puts taille[0][1...50].inspect
 
+	puts "
 
-puts " 
-
------
-Voici les 50 éléments les plus courts :
------
-"
-
-puts taille[0][1...50].inspect
-
-puts "
-
-********
-"
+	********
+	"
+end
 
 ## FIN LENGTH  -----------------------------------------------
 
 ## DEBUT POSITION  ----------------------------------------
 
-posi = []
-posi << a.find_index("@epenser")
+def programme9(a)
+	
+	posi = []
+	posi << a.find_index("@epenser")
 
-puts " 
+	puts " 
+	********
 
------
-@epenser est à la #{posi[0].inspect}e position.
------
+	-----
+	@epenser est à la #{posi[0].inspect}e position.
+	-----
 
-********"
-
+	********"
+end
 
 ## FIN POSITION  ------------------------------------------
 
 
+
+
+## 			!!!!!! GENIE DE LA TOUUUUUNDRAAAA !!!
+
+
+def génie_toundra
+	
+puts "
+	
+	Bienvenue dans la grotte du Génie de la Toundra
+	
+	Le génie peut répondre à certaines de vos questions 
+	concernant une liste secrète.
+
+	En effet, il a réussi à hacker la NASA il y a quelques jours, 
+	et il a désormais accès à des données Secret Défense
+
+	On l'appelle la BLACK LIST ou 'BL'. 
+
+	Vous pouvez choisir entre les options en choissisant le 
+	numéro correspondant: 
+
+ "
+
+choix = 0
+
+while choix != 10
+
+	puts "
+ 1. 	Combien y a t-il de nom dans la BL ?
+ 2. 	Combien de noms de la BL sont-il associés à des chiffres ? 
+ 3. 	Combien de noms de la BL contiennent les lettres 'aude' à la suite ?
+ 4. 	Combien de noms de la BL commencent par une Majuscule ?
+ 5. 	Combien de noms de la BL ont-il une Majuscule ?
+ 6. 	Combien de noms de la BL possedent un '_' ?
+ 
+ 7. 	Génie, donnes-moi la liste dans l'ordre alphabétique !!
+ 8. 	Génie, donnes-moi les 50 noms les plus courts !!
+ 9. 	Génie, donnes-moi la position du traitre '@epenser' !! Il doit mourir.
+
+			**************
+
+ 10. 	Génie, laisses-moi sortir de ta caverne.
+
+	
+	Veuillez choisir une option entre 1 et 10."
+	
+	print " > "
+ 	choix = gets.chomp.to_i
+
+ 	if choix == 1
+ 		programme1(black_list)
+ 	elsif choix == 2
+ 		programme2(black_list)
+ 	elsif choix == 3
+ 		programme3(black_list)
+ 	elsif choix == 4	
+ 		programme4(black_list)
+	elsif choix == 5
+		programme5(black_list)
+	elsif choix == 6
+		programme6(black_list)
+	elsif choix == 7
+		programme7(black_list)
+	elsif choix == 8
+		programme8(black_list)
+	elsif choix == 9
+		programme9(black_list)
+	end
+
+end
+
+end
+
+def paiement
+	
+	puts "
+
+		Merci d'avoir visiter la caverne du Génie de la Toundra.
+		Vous devez maintenant le dédommager pour ses services."
+	print "
+	Veuillez choisir entre : 
+
+		> La mort 	> Tché Tché   || Attention à l'orthographe !! "
+
+	choixnaz = " "
+
+	while choixnaz != "Tché Tché"; "La mort"
+		print " 
+		Fais ton choix malheureux :
+		"
+		print "
+		 > "
+		choixnaz = gets.chomp.to_s
+
+		if choixnaz == "La mort"
+			puts "
+			Tu as le droit à la mort, mais Tché Tché d'abord !!
+			Tu dois rentrer Tché Tché  !!
+			
+			XXXXXXXX
+			"
+		
+		elsif choixnaz == "Tché Tché"
+			puts "
+		Excellent choix voyageur, 
+		ton cul appartient désormais au Génie de la TOUNDRA !!
+
+
+			***********"
+		 
+		end
+end
+
+end
+
+def perform
+	génie_toundra
+	paiement
+end
+
+perform
 
 
 
