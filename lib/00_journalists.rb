@@ -436,11 +436,13 @@ def paiement
 	print "
 	Veuillez choisir entre : 
 
-		> La mort 	> Tché Tché   || Attention à l'orthographe !! "
+		> La mort 	> Tché Tché 	> La vie 
+
+		|| Attention à l'orthographe !! "
 
 	choixnaz = " "
 
-	while choixnaz != "Tché Tché"; "La mort"
+	while choixnaz != "Tché Tché"; "La mort"; "La vie"
 		print " 
 		Fais ton choix malheureux :
 		"
@@ -453,16 +455,35 @@ def paiement
 			Tu as le droit à la mort, mais Tché Tché d'abord !!
 			Tu dois rentrer Tché Tché  !!
 			
-			XXXXXXXX
+			        **
+			      ****
+			    ******
+			  ********
+			**********
 			"
-		
+		elsif choixnaz == "La vie"
+			puts"
+			N'y penses même pas MOUHAHAHAHA !!!
+			        **
+			      ****
+			    ******
+			  ********
+			**********
+			"
+			
 		elsif choixnaz == "Tché Tché"
 			puts "
 		Excellent choix voyageur, 
 		ton cul appartient désormais au Génie de la TOUNDRA !!
 
 
-			***********"
+			***********
+			*********
+			*******
+			******
+			****
+			**
+			"
 		 
 		end
 end
